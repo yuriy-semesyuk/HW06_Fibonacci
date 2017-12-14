@@ -7,12 +7,12 @@ function fibuunachi(a) {
     document.write(x1, ", ");
     document.write(x2, ", ");
     let x3 = x1 + x2;
-    while (x3 <= x) {
+    while (x3 <= a) {
         document.write(x3);
         x1 = x2;
         x2 = x3;
         x3 = x1 + x2;
-        if  (x3 < x) {
+        if  (x3 <= a) {
             document.write(", ");
         }
     }
@@ -21,12 +21,11 @@ function fibuunachi(a) {
 document.write("<br>","<br>","<br>","list :", fibuunachiList(a));
 
 function fibuunachiList(a) {
-    const x = a;
     let fl = [1, 1];
-    while (fl[(fl.length) - 1] < x) {
+    while (fl[(fl.length) - 1] <= a) {
         fl.push(fl[(fl.length) - 1] + fl[(fl.length) - 2]);
     }
-    if (fl[(fl.length) - 1] > x) {
+    if (fl[(fl.length) - 1] > a) {
         fl.pop(fl[(fl.length) - 1]);
     }
     return fl
